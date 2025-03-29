@@ -17,13 +17,25 @@
 	<?php // Top Bar ?>
 	<div class="bg-uab-green w-full h-12 flex items-center px-4">
 		<div class="text-white flex items-center">
-			<?php // Consider making this dynamic via theme options if needed ?>
-			<span class="mr-3 uppercase text-sm tracking-wide">The University of Alabama at Birmingham</span>
+			<?php // Display different logos based on screen size ?>
+
+			<?php // Main Logo (Desktop: lg and up) ?>
+			<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-logo.webp'); ?>"
+				alt="<?php esc_attr_e('The University of Alabama at Birmingham Logo', 'uabwp-tw'); ?>"
+				class="h-5 w-auto mr-3 hidden lg:block"> <?php // Hidden by default, shown on large screens ?>
+
+			<?php // Monogram Logo (Mobile: up to lg) ?>
+			<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-monogram.webp'); ?>"
+				alt="<?php esc_attr_e('UAB Monogram', 'uabwp-tw'); ?>" class="h-5 w-auto mr-3 block lg:hidden">
+			<?php // Shown by default, hidden on large screens ?>
 		</div>
 		<div class="ml-auto flex items-center">
-			<?php // This could link to the main UAB site or be a menu location ?>
-			<a href="#" class="text-white text-sm hover:underline">Explore UAB</a>
-			<i class="fa-solid fa-globe text-white ml-2 text-xs"></i>
+			<?php // Styled the link as a button containing text and icon ?>
+			<a href="#"
+				class="flex items-center text-white text-sm px-3 py-1 rounded hover:bg-dragons-lair-green transition-colors duration-150 ease-in-out">
+				<span>Explore UAB</span>
+				<i class="fa-solid fa-compass text-white ml-2 text-xs"></i>
+			</a>
 		</div>
 	</div>
 
