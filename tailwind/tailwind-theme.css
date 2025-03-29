@@ -1,0 +1,75 @@
+/**
+ * Add your design tokens as Tailwind theme variables.
+ *
+ * https://tailwindcss.com/docs/theme
+ */
+
+/**
+ * Import Tailwind's default theme.
+ */
+@import "tailwindcss/theme";
+
+/**
+ * Your theme variables are merged with Tailwind's defaults, either extending
+ * the default theme with new variables or overriding the values of existing
+ * variables.
+ */
+@theme {
+	/**
+	 * These theme variables use CSS variables set by WordPress using values
+	 * from your `theme.json` file.
+	 *
+	 * If you are using the classic editor, you should use hardcoded color
+	 * values instead of the `var()` functions below.
+	 */
+
+	/**
+	 * Colors from theme.json
+	 */
+	--colors-uab-green: #1a5632;
+	--colors-uab-gold: #fdb913;
+	--colors-dragons-lair-green: #033319;
+	--colors-campus-green: #90d408;
+	--colors-ever-loyal-evergreen: #17b045;
+	--colors-sky-blue: #42caf0;
+	--colors-campus-green-20: #d7efa6;
+	--colors-campus-green-10: #eaf7d0;
+	--colors-campus-green-5: #f4fbe7;
+	--colors-uab-gold-20: #ffe6aa;
+	--colors-uab-gold-10: #fff2d2;
+	--colors-uab-gold-5: #fff8e8;
+	--colors-evergreen-20: #ace2bc;
+	--colors-evergreen-10: #d3f0db;
+	--colors-evergreen-5: #e8f7ed;
+	--colors-sky-blue-20: #bbecfa;
+	--colors-sky-blue-10: #dbf5fc;
+	--colors-sky-blue-5: #edf9fd;
+	--colors-white: #ffffff;
+	--colors-black: #000000;
+	--colors-grey: #888888;
+	--colors-light-grey: #dddddd;
+	--colors-gray-500: #6b7280;
+	--colors-gray-200: #e5e7eb;
+
+	--color-background: var(--wp--preset--color--white);
+	--color-foreground: var(--wp--preset--color--dragons-lair-green);
+	--color-primary: var(--wp--preset--color--uab-green);
+	--color-secondary: var(--wp--preset--color--uab-gold);
+	--color-tertiary: var(--wp--preset--color--ever-loyal-evergreen);
+	--container-content: var(--wp--style--global--content-size);
+	--container-wide: var(--wp--style--global--wide-size);
+
+	/**
+	 * Font families from theme.json
+	 */
+	--font-sans:
+		"Aktiv Grotesk", ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--font-serif:
+		"Kulturista", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+		serif;
+	--font-mono:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
+}

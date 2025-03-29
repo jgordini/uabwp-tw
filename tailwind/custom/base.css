@@ -1,0 +1,93 @@
+/**
+ * Custom styles to immediately follow Tailwind's `base` layer
+ */
+
+/**
+ * This uses the background and foreground colors declared in the `theme.json`
+ * file and is applied both to the front end and in the block editor.
+ */
+body {
+	@apply bg-background text-foreground font-sans;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.main-navigation ul {
+	@apply list-none m-0 p-0;
+}
+
+.main-navigation ul li {
+	@apply relative;
+	/* Add relative positioning for dropdown context */
+}
+
+.main-navigation ul ul.sub-menu {
+	@apply hidden absolute left-0 top-full z-50;
+	/* Hide submenus by default, position absolutely */
+	@apply bg-white shadow-md py-2 min-w-[180px];
+	/* Basic styling */
+}
+
+/* Show submenu on hover/focus-within the parent li */
+.main-navigation ul li:hover>ul.sub-menu,
+.main-navigation ul li:focus-within>ul.sub-menu {
+	@apply block;
+}
+
+/* Style submenu items */
+.main-navigation ul ul.sub-menu li a {
+	@apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100;
+}
+
+/* Add indicator for items with children (requires Font Awesome) */
+.main-navigation .menu-item-has-children>a::after {
+	@apply ml-1 text-xs inline-block;
+	/* Only Tailwind classes here */
+	content: "\f107";
+	/* Font Awesome Unicode for angle-down */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	/* Use the solid style weight */
+}
+
+/* Prevent indicator from showing on sub-menu items */
+.main-navigation ul ul.sub-menu .menu-item-has-children>a::after {
+	content: none;
+}
+
+/* Basic Mobile Menu Toggle Visibility (further JS needed) */
+.menu-toggle {
+	@apply lg:hidden;
+	/* Show only on smaller screens */
+}
+
+/* Hide Nav UL on small screens by default (JS will toggle) */
+@media (max-width: 1023px) {
+
+	/* Corresponds to lg: breakpoint */
+	.main-navigation ul#primary-menu {
+		@apply hidden w-full flex-col items-start gap-0;
+		/* Hide by default, style for vertical layout */
+	}
+
+	.main-navigation ul#primary-menu.toggled {
+		@apply flex;
+		/* JS will add this class to show */
+	}
+
+	/* Ensure submenus work in mobile toggle view */
+	.main-navigation ul ul.sub-menu {
+		@apply static hidden w-full pl-4;
+	}
+
+	/* REMOVED: Explicit hover/focus-within show rule for mobile context */
+	/* .main-navigation ul li:hover > ul.sub-menu, */
+	/* .main-navigation ul li:focus-within > ul.sub-menu { */
+	/*     @apply block; */
+	/* } */
+
+	.main-navigation .menu-item-has-children>a::after {
+		/* Adjust indicator positioning/style for mobile if needed */
+	}
+}

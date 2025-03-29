@@ -1,0 +1,33 @@
+/* Generated theme colors from theme.json */
+@theme {
+  --color-foreground: black; /* Default fallback */
+  --color-background: white; /* Default fallback */
+  --color-primary: #1a5632; /* Default UAB Green fallback */
+  --color-uab-green: #1a5632;
+  --color-primary: var(--color-uab-green);
+  --color-uab-gold: #fdb913;
+  --color-dragons-lair-green: #033319;
+  --color-campus-green: #90d408;
+  --color-ever-loyal-evergreen: #17b045;
+  --color-sky-blue: #42caf0;
+  --color-campus-green-20: #d7efa6;
+  --color-campus-green-10: #eaf7d0;
+  --color-campus-green-5: #f4fbe7;
+  --color-uab-gold-20: #ffe6aa;
+  --color-uab-gold-10: #fff2d2;
+  --color-uab-gold-5: #fff8e8;
+  --color-evergreen-20: #ace2bc;
+  --color-evergreen-10: #d3f0db;
+  --color-evergreen-5: #e8f7ed;
+  --color-sky-blue-20: #bbecfa;
+  --color-sky-blue-10: #dbf5fc;
+  --color-sky-blue-5: #edf9fd;
+  --color-white: #FFFFFF;
+  --color-background: var(--color-white);
+  --color-black: #000000;
+  --color-foreground: var(--color-black);
+  --color-grey: #888888;
+  --color-light-grey: #DDDDDD;
+  --color-gray-500: #6B7280;
+  --color-gray-200: #E5E7EB;
+}
