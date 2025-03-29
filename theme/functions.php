@@ -82,7 +82,9 @@ if (!function_exists('uabwp_tw_setup')):
 		register_nav_menus(
 			array(
 				'menu-1' => __('Primary', 'uabwp-tw'),
-				'menu-2' => __('Footer Menu', 'uabwp-tw'),
+				// 'menu-2'            => __('Footer Menu', 'uabwp-tw'), // Keep or remove if unused
+				'footer-unit-links' => __('Footer - Unit Resources', 'uabwp-tw'),
+				'footer-uab-links' => __('Footer - UAB Resources', 'uabwp-tw'),
 			)
 		);
 

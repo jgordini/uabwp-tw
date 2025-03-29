@@ -26,9 +26,9 @@
           "name": "Campus Green"
         },
         {
-          "slug": "ever-loyal-evergreen",
-          "color": "#17b045",
-          "name": "Ever Loyal Evergreen"
+          "slug": "evergreen",
+          "color": "#306745",
+          "name": "Evergreen"
         },
         {
           "slug": "sky-blue",
@@ -474,7 +474,7 @@
     "custom": {
       "breakpoints": {
         "sm": "640px",
-        "md": "768px", 
+        "md": "768px",
         "lg": "1024px",
         "xl": "1280px",
         "2xl": "1536px"
@@ -585,7 +585,7 @@
       },
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--ever-loyal-evergreen)"
+          "text": "var(--wp--preset--color--evergreen)"
         }
       },
       "button": {
