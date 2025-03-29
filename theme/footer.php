@@ -28,7 +28,7 @@
 				<div>
 					<?php // TODO: Replace with actual UA System logo URL & alt text ?>
 					<img src="<?php echo esc_url(get_template_directory_uri() . '/images/ua-system.webp'); ?>"
-						alt="<?php esc_attr_e('UA System Logo', 'uabwp-tw'); ?>" class="h-20">
+						alt="<?php esc_attr_e('UA System Logo', 'uabwp-tw'); ?>" class="h-14">
 				</div>
 			</div>
 		</div>
