@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="bg-dragons-lair-green text-white p-8 mb-16">
+<div class="bg-dragons-lair-green text-white p-8">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 			<!-- Unit Info -->
