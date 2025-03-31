@@ -36,23 +36,31 @@
 
                     <!-- Action Links -->
                     <?php // TODO: Consider making links dynamic ?>
-                    <div class="flex flex-wrap justify-center mt-8 gap-6">
-                        <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
-                            <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
-                            <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
-                        </a>
-                        <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
-                            <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
-                            <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
-                        </a>
-                        <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
-                            <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
-                            <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
-                        </a>
-                        <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
-                            <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
-                            <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
-                        </a>
+                    <div class="flex flex-wrap justify-center md:justify-center mt-8 gap-6">
+                        <div class="w-full flex justify-start md:w-auto md:justify-center">
+                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                                <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
+                                <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
+                            </a>
+                        </div>
+                        <div class="w-full flex justify-start md:w-auto md:justify-center">
+                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                                <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
+                                <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
+                            </a>
+                        </div>
+                        <div class="w-full flex justify-start md:w-auto md:justify-center">
+                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                                <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
+                                <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
+                            </a>
+                        </div>
+                        <div class="w-full flex justify-start md:w-auto md:justify-center">
+                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                                <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
+                                <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
