@@ -13,12 +13,12 @@
 
 </div><!-- #content -->
 
-<div class="divide-y divide-uab-green">
+<div>
 	<?php get_template_part('template-parts/layout/footer', 'content'); ?>
 
 	<div class="bg-dragons-lair-green text-white">
 		<!-- First row with logos on opposite sides -->
-		<div class="container mx-auto p-8">
+		<div class="max-w-[1340px] mx-auto pt-8 border-solid border-t border-uab-green">
 			<div class="flex justify-between items-center">
 				<div>
 					<?php // TODO: Replace with actual UAB logo URL & alt text ?>
@@ -34,7 +34,7 @@
 		</div>
 
 		<!-- Second row with nondiscrimination button on left and links + copyright on right -->
-		<div class="container mx-auto px-8 pb-8">
+		<div class="max-w-[1340px] mx-auto py-8 ">
 			<div class="flex flex-wrap justify-between items-center gap-4">
 				<div>
 					<?php // TODO: Link Nondiscrimination Statement button properly ?>
@@ -64,13 +64,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</div><!-- #page -->
 
-</div><!-- #page -->
+	<?php wp_footer(); ?>
 
-<?php wp_footer(); ?>
+	</body>
 
-</body>
-
-</html>
+	</html>
