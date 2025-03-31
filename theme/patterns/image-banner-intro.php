@@ -14,7 +14,7 @@
 
     <div class="relative w-full">
         <!-- Banner Image -->
-        <div class="w-full h-96 overflow-hidden">
+        <div class="w-full h-96 overflow-hidden mb-64">
             <?php // TODO: Consider replacing placeholder image with a dynamic option or clearer placeholder ?>
             <img src="<?php echo esc_url(get_template_directory_uri() . '/images/ban-2.webp'); ?>"
                 alt="<?php esc_attr_e('Site Banner', 'uabwp-tw'); ?>" class="w-full h-full object-cover">
