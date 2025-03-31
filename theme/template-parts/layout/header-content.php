@@ -11,7 +11,7 @@
 
 <?php // IMPORTANT: Ensure Tailwind CSS, Font Awesome, and Typekit fonts are enqueued in functions.php ?>
 
-<header id="masthead" class="w-full relative shadow-md mb-12 site-header">
+<header id="masthead" class="w-full relative shadow-md site-header">
 	<?php // Added site-header class for potential global styling ?>
 
 	<?php // Top Bar ?>

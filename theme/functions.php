@@ -118,6 +118,9 @@ if (!function_exists('uabwp_tw_setup')):
 		// Add support for responsive embedded content.
 		add_theme_support('responsive-embeds');
 
+		// Add support for wide alignment.
+		add_theme_support('align-wide');
+
 		// Remove support for block templates.
 		remove_theme_support('block-templates');
 	}
@@ -206,3 +209,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Load block patterns registration file.
+ */
+require get_template_directory() . '/inc/patterns.php';
