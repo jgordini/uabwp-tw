@@ -30,6 +30,5 @@
 		<?php get_template_part('template-parts/layout/header', 'content'); ?>
 
 		<div id="content" class="site-content">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div id="primary" class="content-area">
-					<main id="main" class="site-main">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main">

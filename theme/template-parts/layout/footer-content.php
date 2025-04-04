@@ -18,7 +18,8 @@
 					<div class="md:col-span-2">
 						<?php // TODO: Make Unit Title dynamic (Theme Option?) ?>
 						<h3 class="text-3xl font-bold mb-4 text-white">
-							<?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?></h3>
+							<?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?>
+						</h3>
 						<?php // TODO: Make address dynamic (Theme Option?) ?>
 						<p class="mb-6">
 							Lorem Ipsum Building (LIB)<br>1665 University Boulevard<br>Birmingham,
@@ -121,7 +122,7 @@
 
 			<div>
 				<!-- First row with logos on opposite sides -->
-				<div class="max-w-[1340px] mx-auto p-8">
+				<div class="max-w-7xl mx-auto pb-8 lg:pb-4">
 					<div class="flex justify-between items-center">
 						<div>
 							<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-standard.webp'); ?>"
@@ -135,7 +136,7 @@
 				</div>
 
 				<!-- Second row with nondiscrimination button on left and links + copyright on right -->
-				<div class="max-w-[1340px] mx-auto px-8 pb-8">
+				<div class="max-w-7xl mx-auto pb-8">
 					<div class="flex flex-wrap justify-between items-center gap-4">
 						<div>
 							<a href="#nondiscrimination-link"

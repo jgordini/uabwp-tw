@@ -13,7 +13,6 @@
 
 </main><!-- #main -->
 </div><!-- #primary -->
-</div><!-- .max-w-7xl container -->
 </div><!-- #content -->
 
 <?php get_template_part('template-parts/layout/footer', 'content'); ?>
