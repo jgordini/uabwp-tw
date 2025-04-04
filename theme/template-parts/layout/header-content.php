@@ -12,34 +12,36 @@
 <?php // IMPORTANT: Ensure Tailwind CSS, Font Awesome, and Typekit fonts are enqueued in functions.php ?>
 
 <header id="masthead" class="w-full site-header">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <?php // Added container ?>
-		<?php // Top Bar ?>
-		<div class="bg-uab-green w-full">
-			<div class="max-w-[1340px] mx-auto h-12 flex justify-between items-center px-4">
-				<div class="text-white flex items-center">
-					<?php // Display different logos based on screen size ?>
 
-					<?php // Main Logo (Desktop: lg and up) ?>
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-logo.webp'); ?>"
-						alt="<?php esc_attr_e('The University of Alabama at Birmingham Logo', 'uabwp-tw'); ?>"
-						class="h-5 w-auto mr-3 hidden lg:block"> <?php // Hidden by default, shown on large screens ?>
+	<?php // Top Bar - Moved Outside Container ?>
+	<div class="bg-uab-green w-full">
+		<div class="max-w-7xl mx-auto h-12 flex px-4 sm:px-6 lg:px-8">
+			<div class="text-white flex items-center">
+				<?php // Display different logos based on screen size ?>
 
-					<?php // Monogram Logo (Mobile: up to lg) ?>
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-monogram.webp'); ?>"
-						alt="<?php esc_attr_e('UAB Monogram', 'uabwp-tw'); ?>" class="h-5 w-auto mr-3 block lg:hidden">
-					<?php // Shown by default, hidden on large screens ?>
-				</div>
-				<div class="ml-auto flex items-center">
-					<?php // Styled the link as a button containing text and icon ?>
-					<a href="#"
-						class="flex items-center text-white text-sm px-3 py-1 rounded hover:bg-dragons-lair-green transition-colors duration-150 ease-in-out">
-						<span>Explore UAB</span>
-						<i class="fa-solid fa-compass text-white ml-2 text-xs"></i>
-					</a>
-				</div>
+				<?php // Main Logo (Desktop: lg and up) ?>
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-logo.webp'); ?>"
+					alt="<?php esc_attr_e('The University of Alabama at Birmingham Logo', 'uabwp-tw'); ?>"
+					class="h-5 w-auto mr-3 hidden lg:block"> <?php // Hidden by default, shown on large screens ?>
+
+				<?php // Monogram Logo (Mobile: up to lg) ?>
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/uab-monogram.webp'); ?>"
+					alt="<?php esc_attr_e('UAB Monogram', 'uabwp-tw'); ?>" class="h-5 w-auto mr-3 block lg:hidden">
+				<?php // Shown by default, hidden on large screens ?>
+			</div>
+			<div class="ml-auto flex items-center">
+				<?php // Styled the link as a button containing text and icon ?>
+				<a href="#"
+					class="flex items-center text-white text-sm px-3 py-1 rounded hover:bg-dragons-lair-green transition-colors duration-150 ease-in-out">
+					<span>Explore UAB</span>
+					<i class="fa-solid fa-compass text-white ml-2 text-xs"></i>
+				</a>
 			</div>
 		</div>
+	</div>
 
+	<?php // Container for remaining header content ?>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<?php // Main Header Content Area (Site Title, Description, Search) ?>
 		<div class="bg-white w-full">
 			<div class="max-w-[1340px] mx-auto px-4 py-10">
