@@ -24,9 +24,13 @@
 
 	<?php wp_body_open(); ?>
 
-	<div id="page">
-		<a href="#content" class="sr-only"><?php esc_html_e('Skip to content', 'uabwp-tw'); ?></a>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text"
+			href="#primary"><?php esc_html_e('Skip to content', 'uabwp-tw'); ?></a>
 
 		<?php get_template_part('template-parts/layout/header', 'content'); ?>
 
-		<div id="content">
+		<div id="content" class="site-content">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">

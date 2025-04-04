@@ -305,8 +305,8 @@
       "defaultFontSizes": false
     },
     "layout": {
-      "contentSize": "1024px",
-      "wideSize": "1280px"
+      "contentSize": "65ch",
+      "wideSize": "80ch"
     },
     "spacing": {
       "units": [
