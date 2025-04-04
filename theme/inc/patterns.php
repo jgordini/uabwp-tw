@@ -225,6 +225,20 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register Three Column Grid with Links Pattern
+    register_block_pattern(
+        'uabwp-tw/3col-grid-w-links',
+        array(
+            'title' => esc_html__('Three Column Grid with Links', 'uabwp-tw'),
+            'description' => esc_html__('A responsive three-column grid layout with headings, descriptive text, and call-to-action links.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('3col-grid-w-links'),
+            'categories' => array('featured', 'grid', 'text', 'uab'),
+            'keywords' => array('grid', 'columns', 'links', 'text', 'content'),
+            'blockTypes' => array('core/group', 'core/heading', 'core/paragraph'),
+            'viewportWidth' => 1340,
+        )
+    );
+
     // Add more register_block_pattern() calls here for other patterns...
 
 }

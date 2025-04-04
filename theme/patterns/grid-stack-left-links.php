@@ -28,7 +28,8 @@
 
         <!-- Title -->
         <h3 class="text-3xl font-bold mb-3 font-kulturista text-black">
-            <?php echo esc_html__('Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit', 'uabwp-tw'); ?></h3>
+            <?php echo esc_html__('Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit', 'uabwp-tw'); ?>
+        </h3>
         <span class="bg-uab-green block h-1 mb-5 w-12"></span>
 
         <!-- Description -->

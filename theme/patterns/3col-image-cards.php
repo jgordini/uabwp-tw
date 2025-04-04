@@ -41,8 +41,7 @@
                 </p>
                 <div class="mt-auto">
                     <a href="#"
-                        class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?><i
-                            class="fa-solid fa-up-right-from-square ml-1.5" aria-hidden="true"></i><span
+                        class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?><span
                             class="sr-only"> <?php esc_html_e('Learn more', 'uabwp-tw'); ?></span></a>
                 </div>
             </div>
@@ -60,8 +59,8 @@
                 <div class="mt-auto">
                     <a href="#"
                         class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?><i
-                            class="fa-solid fa-up-right-from-square ml-1.5" aria-hidden="true"></i><span
-                            class="sr-only"> <?php esc_html_e('Learn more', 'uabwp-tw'); ?></span></a>
+                            class="fa-solid fa-arrow-right ml-1.5" aria-hidden="true"></i><span class="sr-only">
+                            <?php esc_html_e('Learn more', 'uabwp-tw'); ?></span></a>
                 </div>
             </div>
         </div>
