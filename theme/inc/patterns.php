@@ -253,6 +253,19 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register Accordion List Pattern
+    register_block_pattern(
+        'uabwp-tw/accordion-list', // Matches the slug in patterns/accordion-list.php
+        array(
+            'title' => esc_html__('Accordion List', 'uabwp-tw'),
+            'description' => esc_html__('A styled list of multiple accordion items.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('accordion-list'), // Reads patterns/accordion-list.php
+            'categories' => array('uab', 'text', 'list'), // Match categories from pattern file or adjust as needed
+            'keywords' => array('accordion', 'toggle', 'collapse', 'faq', 'list'),
+            'viewportWidth' => 800, // Optional: Adjust viewport preview width
+        )
+    );
+
     // Add more register_block_pattern() calls here for other patterns...
 
 }
