@@ -239,6 +239,20 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register Accordion Item Pattern
+    register_block_pattern(
+        'uabwp-tw/accordion-item', // Matches the slug in patterns/accordion.php
+        array(
+            'title' => esc_html__('Accordion Item', 'uabwp-tw'),
+            'description' => esc_html__('A single accordion item including a toggle button and content area. Requires JavaScript.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('accordion'), // Reads patterns/accordion.php
+            'categories' => array('uab', 'text'), // Match categories from pattern file or adjust as needed
+            'keywords' => array('accordion', 'toggle', 'collapse', 'faq', 'item'),
+            // 'blockTypes' => array('core/html'), // Optional: Specify block types if useful
+            'viewportWidth' => 800, // Optional: Adjust viewport preview width
+        )
+    );
+
     // Add more register_block_pattern() calls here for other patterns...
 
 }

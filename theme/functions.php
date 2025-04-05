@@ -158,6 +158,9 @@ function uabwp_tw_scripts()
 	// Enqueue Font Awesome 6 Free All Styles
 	wp_enqueue_style('font-awesome-free', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css', array(), '6.5.2');
 
+	// Enqueue Accordion JS
+	wp_enqueue_script('uabwp-tw-accordion', get_template_directory_uri() . '/js/accordion.js', array(), UABWP_TW_VERSION, true);
+
 	wp_enqueue_script('uabwp-tw-script', get_template_directory_uri() . '/js/script.min.js', array(), UABWP_TW_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
