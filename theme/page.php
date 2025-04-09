@@ -14,27 +14,38 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
+<?php
+// Display featured image if set
+if (has_post_thumbnail()):
+	?>
+	<figure class="page-featured-image w-full mb-8 h-64 lg:h-96 overflow-hidden">
+		<?php the_post_thumbnail('full', array('class' => 'w-full h-full object-cover')); ?>
+	</figure>
+	<?php
+endif;
+?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+<section id="primary">
+	<main id="main">
 
-				get_template_part( 'template-parts/content/content', 'page' );
+		<?php
+		/* Start the Loop */
+		while (have_posts()):
+			the_post();
 
-				// If comments are open, or we have at least one comment, load
-				// the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
+			get_template_part('template-parts/content/content', 'page');
 
-			endwhile; // End of the loop.
-			?>
+			// If comments are open, or we have at least one comment, load
+			// the comment template.
+			if (comments_open() || get_comments_number()) {
+				comments_template();
+			}
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
 get_footer();

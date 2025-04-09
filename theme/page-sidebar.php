@@ -13,6 +13,17 @@
 get_header();
 ?>
 
+<?php
+// Display featured image if set
+if (has_post_thumbnail()):
+    ?>
+    <figure class="page-featured-image w-full mb-8 h-64 lg:h-96 overflow-hidden">
+        <?php the_post_thumbnail('full', array('class' => 'w-full h-full object-cover')); ?>
+    </figure>
+    <?php
+endif;
+?>
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:flex lg:gap-8">
     <?php // Flex container for content + sidebar ?>
 
