@@ -37,8 +37,16 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
             $args = apply_filters('nav_menu_item_args', $args, $menu_item, $depth);
 
             // --- Custom Styling Logic --- 
-            $li_classes = ['bg-white', 'border-b', 'border-gray-200', 'relative'];
+            $li_classes = ['bg-white', 'border-b', 'border-gray-200', 'relative']; // Each menu item has a bottom border
             $a_classes = ['block', 'transition-colors', 'duration-200', 'text-uab-green', 'text-lg', 'no-underline'];
+
+            // Add flex layout for items with children to position the toggle icon
+            if (in_array('menu-item-has-children', $classes)) {
+                $a_classes[] = 'flex';
+                $a_classes[] = 'justify-between';
+                $a_classes[] = 'items-center';
+            }
+
             $padding = 'px-6 py-5'; // Default padding for depth 0
 
             if ($depth === 0) {
@@ -64,9 +72,8 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
                     $is_current_or_ancestor = in_array('current-menu-item', $classes, true) || in_array('current-menu-ancestor', $classes, true);
                     if ($is_current_or_ancestor) {
                         $li_classes = array_diff($li_classes, ['bg-white']); // Remove bg-white
-                        $li_classes[] = 'bg-uab-green';
-                        $a_classes = array_diff($a_classes, ['text-uab-green']); // Remove text-uab-green
-                        $a_classes[] = 'text-white';
+                        $li_classes[] = 'bg-gray-100';
+                        // Keep the text color as uab-green for better contrast with light gray background
                     }
                 }
             } elseif ($depth === 1) {
@@ -77,9 +84,8 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
                 $is_current = in_array('current-menu-item', $classes, true);
                 if ($is_current) {
                     $li_classes = array_diff($li_classes, ['bg-white']);
-                    $li_classes[] = 'bg-uab-green';
-                    $a_classes = array_diff($a_classes, ['text-uab-green']);
-                    $a_classes[] = 'text-white';
+                    $li_classes[] = 'bg-gray-100';
+                    // Keep the text color as uab-green for better contrast with light gray background
                 }
             } else {
                 // Deeper levels - use same padding as level 1 for now, adjust if needed
@@ -89,9 +95,8 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
                 $is_current = in_array('current-menu-item', $classes, true);
                 if ($is_current) {
                     $li_classes = array_diff($li_classes, ['bg-white']);
-                    $li_classes[] = 'bg-uab-green';
-                    $a_classes = array_diff($a_classes, ['text-uab-green']);
-                    $a_classes[] = 'text-white';
+                    $li_classes[] = 'bg-gray-100';
+                    // Keep the text color as uab-green for better contrast with light gray background
                 }
             }
 
@@ -118,6 +123,12 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
                 }
                 $atts['href'] = !empty($menu_item->url) ? $menu_item->url : '';
                 $atts['aria-current'] = $menu_item->current ? 'page' : '';
+
+                // Add special class for parent items to help with JavaScript toggling
+                if (in_array('menu-item-has-children', $classes)) {
+                    $a_classes[] = 'sidebar-parent-toggle';
+                }
+
                 $atts['class'] = implode(' ', $a_classes) . ' ' . $padding; // Combine base classes and padding
 
                 $atts = apply_filters('nav_menu_link_attributes', $atts, $menu_item, $args, $depth);
@@ -129,6 +140,12 @@ if (!class_exists('UABWP_TW_Sidebar_Nav_Walker')) {
                 $item_output = $args->before;
                 $item_output .= '<a' . $this->build_atts($atts) . '>';
                 $item_output .= $args->link_before . $title . $args->link_after;
+
+                // Add toggle icon for parent items
+                if (in_array('menu-item-has-children', $classes)) {
+                    $item_output .= '<i class="fa-solid fa-plus sidebar-toggle-icon ml-auto flex-shrink-0"></i>';
+                }
+
                 $item_output .= '</a>';
                 $item_output .= $args->after;
             }

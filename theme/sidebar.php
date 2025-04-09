@@ -17,19 +17,20 @@ require_once get_template_directory() . '/inc/walkers/class-sidebar-nav-walker.p
 
 ?>
 <?php // Match the outer container style from the HTML example ?>
-<aside id="secondary" class="widget-area w-full lg:w-1/4 border border-gray-200">
+<aside id="secondary"
+    class="widget-area hidden lg:block w-full lg:w-1/4 border-t border-l border-r border-gray-200 h-fit">
     <div class="border-t-2 border-uab-green">
         <?php // Optional: Add a menu header like the example if desired (can be a widget or hardcoded) ?>
         <?php /*
-   <div class="bg-white border-b border-gray-200">
-       <div class="px-4 py-5">
-           <h4 class="text-xl font-bold text-uab-green">
-               <?php // Replace with dynamic title if needed, e.g., from a widget or customizer setting ?>
-               <?php echo esc_html__( 'Sidebar Menu', 'uabwp-tw' ); ?>
-           </h4>
-       </div>
-   </div>
-   */ ?>
+<div class="bg-white border-b border-gray-200">
+<div class="px-4 py-5">
+<h4 class="text-xl font-bold text-uab-green">
+<?php // Replace with dynamic title if needed, e.g., from a widget or customizer setting ?>
+<?php echo esc_html__( 'Sidebar Menu', 'uabwp-tw' ); ?>
+</h4>
+</div>
+</div>
+*/ ?>
 
         <nav id="sidebar-navigation" class="sidebar-navigation bg-white"
             aria-label="<?php esc_attr_e('Sidebar Menu', 'uabwp-tw'); ?>">

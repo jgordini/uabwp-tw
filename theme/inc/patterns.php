@@ -258,11 +258,26 @@ function uabwp_tw_register_block_patterns()
         'uabwp-tw/accordion-list', // Matches the slug in patterns/accordion-list.php
         array(
             'title' => esc_html__('Accordion List', 'uabwp-tw'),
-            'description' => esc_html__('A styled list of multiple accordion items.', 'uabwp-tw'),
+            'description' => esc_html__('A list of accordion items with toggle buttons and content areas.', 'uabwp-tw'),
             'content' => uabwp_tw_get_pattern_content('accordion-list'), // Reads patterns/accordion-list.php
-            'categories' => array('uab', 'text', 'list'), // Match categories from pattern file or adjust as needed
-            'keywords' => array('accordion', 'toggle', 'collapse', 'faq', 'list'),
-            'viewportWidth' => 800, // Optional: Adjust viewport preview width
+            'categories' => array('uab', 'text'), // Match categories from pattern file or adjust as needed
+            'keywords' => array('accordion', 'list', 'toggle', 'collapse', 'faq'),
+            'blockTypes' => array('core/group', 'core/heading', 'core/paragraph'),
+            'viewportWidth' => 1340,
+        )
+    );
+
+    // Register Staff Pictures with Dropdown Filter Pattern
+    register_block_pattern(
+        'uabwp-tw/staff-pics',
+        array(
+            'title' => esc_html__('Staff Pictures With Dropdown Filter', 'uabwp-tw'),
+            'description' => esc_html__('A grid of staff members with their information and a dropdown filter.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('staff-pics'),
+            'categories' => array('uab', 'text', 'staff'),
+            'keywords' => array('staff', 'directory', 'people', 'filter', 'profiles', 'headshots'),
+            'blockTypes' => array('core/group', 'core/heading', 'core/paragraph', 'core/image'),
+            'viewportWidth' => 1340,
         )
     );
 
@@ -277,9 +292,20 @@ add_action('init', 'uabwp_tw_register_block_patterns');
  */
 function uabwp_tw_register_block_pattern_categories()
 {
+    // Register the 'uab' category
     register_block_pattern_category(
-        'uab', // Category slug
-        array('label' => esc_html__('UAB', 'uabwp-tw')) // Category label
+        'uab',
+        array(
+            'label' => esc_html__('UAB Patterns', 'uabwp-tw'),
+        )
+    );
+
+    // Register the 'staff' category
+    register_block_pattern_category(
+        'staff',
+        array(
+            'label' => esc_html__('Staff & Personnel', 'uabwp-tw'),
+        )
     );
 }
 add_action('init', 'uabwp_tw_register_block_pattern_categories');

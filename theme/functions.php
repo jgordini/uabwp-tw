@@ -162,7 +162,13 @@ function uabwp_tw_scripts()
 	// Enqueue Accordion JS
 	wp_enqueue_script('uabwp-tw-accordion', get_template_directory_uri() . '/js/accordion.js', array(), UABWP_TW_VERSION, true);
 
+	// Enqueue Sidebar Menu JS
+	wp_enqueue_script('uabwp-tw-sidebar-menu', get_template_directory_uri() . '/js/sidebar-menu.js', array(), UABWP_TW_VERSION, true);
+
 	wp_enqueue_script('uabwp-tw-script', get_template_directory_uri() . '/js/script.min.js', array(), UABWP_TW_VERSION, true);
+
+	// Staff filter script
+	wp_enqueue_script('uabwp-tw-staff-filter', get_template_directory_uri() . '/js/staff-filter.js', array(), UABWP_TW_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
