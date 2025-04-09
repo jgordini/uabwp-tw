@@ -2,7 +2,7 @@
 /**
  * Title: Staff Pictures With Dropdown Filter
  * Slug: uabwp-tw/staff-pics
- * Categories: uabwp-tw, staff
+ * Categories: uabwp-tw
  * Description: A grid of staff members with their information and a dropdown filter.
  */
 ?>

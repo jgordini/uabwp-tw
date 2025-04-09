@@ -274,61 +274,48 @@ function uabwp_tw_register_block_patterns()
             'title' => esc_html__('Staff Pictures With Dropdown Filter', 'uabwp-tw'),
             'description' => esc_html__('A grid of staff members with their information and a dropdown filter.', 'uabwp-tw'),
             'content' => uabwp_tw_get_pattern_content('staff-pics'),
-            'categories' => array('uab', 'text', 'staff'),
+            'categories' => array('uab', 'text'),
             'keywords' => array('staff', 'directory', 'people', 'filter', 'profiles', 'headshots'),
             'blockTypes' => array('core/group', 'core/heading', 'core/paragraph', 'core/image'),
             'viewportWidth' => 1340,
         )
     );
 
-    // Register News Feed - 3 Across Cards Pattern
+    // Register News Feed - 1 Column List Pattern
     register_block_pattern(
-        'uabwp-tw/news-feed-3-across',
+        'uabwp-tw/news-feed-1-col',
         array(
-            'title' => esc_html__('News Feed - 3 Across Cards', 'uabwp-tw'),
-            'description' => esc_html__('Displays the latest 3 posts as cards with images, titles, and excerpts in a 3-column grid.', 'uabwp-tw'),
-            'content' => uabwp_tw_get_pattern_content('news-feed-3-across'),
-            'categories' => array('uab', 'news'),
-            'keywords' => array('news', 'posts', 'feed', 'grid', 'cards'),
+            'title' => esc_html__('News Feed - 1 Column List', 'uabwp-tw'),
+            'description' => esc_html__('Displays the latest posts in a single-column list with images, titles, dates, and excerpts.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('news-feed-1-col'),
+            'categories' => array('uab', 'news'), // Add 'uab' as well
+            'keywords' => array('news', 'posts', 'feed', 'list', 'query loop', 'blog'),
             'viewportWidth' => 1340,
         )
     );
 
-    // Register News Feed - 4 Across Cards Pattern
+    // Register News Feed - 2 Column Cards Pattern
     register_block_pattern(
-        'uabwp-tw/news-feed-4-across',
+        'uabwp-tw/news-feed-2-col',
         array(
-            'title' => esc_html__('News Feed - 4 Across Cards', 'uabwp-tw'),
-            'description' => esc_html__('Displays the latest 4 posts as cards with images, titles, dates, and excerpts in a 4-column grid.', 'uabwp-tw'),
-            'content' => uabwp_tw_get_pattern_content('news-feed-4-across'),
+            'title' => esc_html__('News Feed - 2 Column Cards', 'uabwp-tw'),
+            'description' => esc_html__('Displays the latest posts as cards in a 2-column grid.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('news-feed-2-col'),
             'categories' => array('uab', 'news'),
-            'keywords' => array('news', 'posts', 'feed', 'grid', 'cards'),
+            'keywords' => array('news', 'posts', 'feed', 'grid', 'cards', 'query loop'),
             'viewportWidth' => 1340,
         )
     );
 
-    // Register News Feed - Side-by-Side List Pattern
+    // Register News Feed - 3 Column Cards Pattern
     register_block_pattern(
-        'uabwp-tw/news-feed-side-by-side',
+        'uabwp-tw/news-feed-3-col',
         array(
-            'title' => esc_html__('News Feed - Side-by-Side List', 'uabwp-tw'),
-            'description' => esc_html__('Displays the latest 3 posts in a list format with image on the left and text on the right.', 'uabwp-tw'),
-            'content' => uabwp_tw_get_pattern_content('news-feed-side-by-side'),
+            'title' => esc_html__('News Feed - 3 Column Cards', 'uabwp-tw'),
+            'description' => esc_html__('Displays the latest posts as cards in a 3-column grid.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('news-feed-3-col'),
             'categories' => array('uab', 'news'),
-            'keywords' => array('news', 'posts', 'feed', 'list', 'side by side'),
-            'viewportWidth' => 1340,
-        )
-    );
-
-    // Register News Feed - Side-by-Side 2 Across Pattern
-    register_block_pattern(
-        'uabwp-tw/news-feed-side-by-side-2-across',
-        array(
-            'title' => esc_html__('News Feed - Side-by-Side 2 Across', 'uabwp-tw'),
-            'description' => esc_html__('Displays the latest 4 posts in a 2-column grid, where each item has an image on the left and text on the right.', 'uabwp-tw'),
-            'content' => uabwp_tw_get_pattern_content('news-feed-side-by-side-2-across'),
-            'categories' => array('uab', 'news'),
-            'keywords' => array('news', 'posts', 'feed', 'grid', 'list', 'side by side'),
+            'keywords' => array('news', 'posts', 'feed', 'grid', 'cards', 'query loop'),
             'viewportWidth' => 1340,
         )
     );
@@ -347,14 +334,6 @@ function uabwp_tw_register_block_pattern_categories()
         'uab',
         array(
             'label' => esc_html__('UAB Patterns', 'uabwp-tw'),
-        )
-    );
-
-    // Register the 'staff' category
-    register_block_pattern_category(
-        'staff',
-        array(
-            'label' => esc_html__('Staff & Personnel', 'uabwp-tw'),
         )
     );
 

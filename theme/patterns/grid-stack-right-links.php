@@ -9,7 +9,7 @@
  * Viewport Width: 1340
  */
 ?>
-<div class="flex flex-col-reverse lg:flex-row lg:items-center gap-10 mb-12 max-w-7xl mx-auto px-6 sm:px-0">
+<div class="flex flex-col-reverse lg:flex-row lg:items-center gap-10 mb-10 max-w-7xl mx-auto px-6 sm:px-0">
     <!-- Content Column -->
     <div class="lg:w-1/2 md:px-4 lg:p-6">
         <!-- Pre-header -->

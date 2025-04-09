@@ -9,14 +9,14 @@
  * Viewport Width: 1340
  */
 ?>
-<section class="alignfull mb-16">
+<section class="alignfull mb-0">
     <?php // Changed H2 to be screen-reader only for accessibility as it describes the pattern itself ?>
 
     <div class="relative w-full md:pb-48">
         <!-- Banner Image -->
         <div class="w-full h-96 overflow-hidden md:mb-0">
             <?php // TODO: Consider replacing placeholder image with a dynamic option or clearer placeholder ?>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/ban-2.webp'); ?>"
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/ban-4.webp'); ?>"
                 alt="<?php esc_attr_e('Site Banner', 'uabwp-tw'); ?>" class="w-full h-full object-cover">
         </div>
 

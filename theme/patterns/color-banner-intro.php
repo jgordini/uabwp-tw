@@ -9,7 +9,7 @@
  * Viewport Width: 1340
  */
 ?>
-<section class="alignfull mb-12">
+<section class="alignfull mb-0">
     <?php // Changed H2 to be screen-reader only for accessibility as it describes the pattern itself ?>
 
     <div class="relative w-full md:pb-48">

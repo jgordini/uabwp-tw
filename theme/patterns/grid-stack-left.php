@@ -9,7 +9,7 @@
  * Viewport Width: 1340
  */
 ?>
-<div class="flex flex-col lg:flex-row lg:items-center gap-10 mb-12 max-w-7xl mx-auto px-6 sm:px-0">
+<div class="flex flex-col lg:flex-row lg:items-center gap-10 mb-10 max-w-7xl mx-auto px-6 sm:px-0">
     <!-- Image Column -->
     <div class="lg:w-1/2">
         <?php // TODO: Replace with dynamic image source or block binding ?>
