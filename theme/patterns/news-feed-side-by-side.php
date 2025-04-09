@@ -35,9 +35,7 @@ $the_query = new WP_Query($args);
                     </div>
                     <div class="md:col-span-2 p-6">
                         <h3 class="text-2xl font-bold mb-2 font-kulturista capitalize">
-                            <a href="<?php echo esc_url(get_permalink()); ?>" class="hover:text-uab-green transition-colors">
-                                <?php the_title(); ?>
-                            </a>
+                            <?php the_title(); ?>
                         </h3>
                         <div class="text-sm font-bold mb-4 font-aktiv-grotesk">
                             <?php echo get_the_date(); ?>

@@ -33,9 +33,7 @@ $the_query = new WP_Query($args);
                     </div>
                     <div class="p-6 shadow-md flex-1">
                         <h3 class="text-2xl font-bold mb-4 font-kulturista capitalize">
-                            <a href="<?php echo esc_url(get_permalink()); ?>" class="hover:text-uab-green transition-colors">
-                                <?php the_title(); ?>
-                            </a>
+                            <?php the_title(); // Title is not linked here, per example ?>
                         </h3>
                         <p class="text-lg leading-7">
                             <?php the_excerpt(); ?>
