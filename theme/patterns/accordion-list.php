@@ -17,7 +17,7 @@
                 class="text-xl text-black"><?php echo esc_html__('Accordion Title 1', 'uabwp-tw'); ?></span><i
                 class="fa-solid accordion-icon fa-plus"></i></button>
         <div class="accordion-content px-5 py-4">
-            <p class="text-lg leading-5">
+            <p class="text-lg leading-7">
                 <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'uabwp-tw'); ?>
             </p>
         </div>
@@ -29,7 +29,7 @@
                 class="text-xl text-black"><?php echo esc_html__('Accordion Title 2', 'uabwp-tw'); ?></span><i
                 class="fa-solid accordion-icon fa-plus"></i></button>
         <div class="accordion-content px-5 py-4">
-            <p class="text-lg leading-5">
+            <p class="text-lg leading-7">
                 <?php echo esc_html__('Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'uabwp-tw'); ?>
             </p>
         </div>
@@ -41,7 +41,7 @@
                 class="text-xl text-black"><?php echo esc_html__('Accordion Title 3', 'uabwp-tw'); ?></span><i
                 class="fa-solid accordion-icon fa-plus"></i></button>
         <div class="accordion-content px-5 py-4">
-            <p class="text-lg leading-5">
+            <p class="text-lg leading-7">
                 <?php echo esc_html__('Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'uabwp-tw'); ?>
             </p>
         </div>

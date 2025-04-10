@@ -14,7 +14,7 @@
             class="text-xl text-white"><?php echo esc_html__('Accordion Title Here', 'uabwp-tw'); ?></span><?php // Icon state handled by JS, default to closed ?><i
             class="fa-solid accordion-icon fa-plus"></i></button><?php // Accordion Content Panel - Visibility handled by JavaScript, default hidden ?>
     <div class="accordion-content px-5">
-        <p class="text-lg leading-5">
+        <p class="text-lg leading-7">
             <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'uabwp-tw'); ?>
         </p>
     </div>

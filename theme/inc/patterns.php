@@ -320,6 +320,19 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register News Feed - Image Left Pattern
+    register_block_pattern(
+        'uabwp-tw/news-feed-left',
+        array(
+            'title' => esc_html__('News Feed - Image Left', 'uabwp-tw'),
+            'description' => esc_html__('Displays the latest posts in a list with image on the left and text on the right.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('news-feed-left'),
+            'categories' => array('uab', 'news'),
+            'keywords' => array('news', 'posts', 'feed', 'list', 'side by side', 'query loop'),
+            'viewportWidth' => 1340,
+        )
+    );
+
 }
 add_action('init', 'uabwp_tw_register_block_patterns');
 
