@@ -6,6 +6,60 @@
  *
  * @package uabwp-tw
  */
+// Bootstrap Carbon Fields
+add_action('after_setup_theme', function () {
+	if (file_exists(get_template_directory() . '/vendor/autoload.php')) {
+		require_once get_template_directory() . '/vendor/autoload.php';
+		\Carbon_Fields\Carbon_Fields::boot();
+	}
+});
+// Register Staff CPT and Staff Category taxonomy
+add_action('init', function () {
+	// Register Staff Category taxonomy
+	register_taxonomy('staff_category', 'staff', array(
+		'label' => __('Staff Categories', 'uabwp-tw'),
+		'hierarchical' => true,
+		'public' => true,
+		'show_admin_column' => true,
+		'rewrite' => array('slug' => 'staff-category'),
+	));
+
+	// Register Staff custom post type
+	register_post_type('staff', array(
+		'labels' => array(
+			'name' => __('Staff', 'uabwp-tw'),
+			'singular_name' => __('Staff Member', 'uabwp-tw'),
+			'add_new' => __('Add New', 'uabwp-tw'),
+			'add_new_item' => __('Add New Staff Member', 'uabwp-tw'),
+			'edit_item' => __('Edit Staff Member', 'uabwp-tw'),
+			'new_item' => __('New Staff Member', 'uabwp-tw'),
+			'view_item' => __('View Staff Member', 'uabwp-tw'),
+			'search_items' => __('Search Staff', 'uabwp-tw'),
+			'not_found' => __('No staff found', 'uabwp-tw'),
+			'not_found_in_trash' => __('No staff found in Trash', 'uabwp-tw'),
+		),
+		'public' => true,
+		'has_archive' => false,
+		'rewrite' => array('slug' => 'staff'),
+		'supports' => array('title', 'thumbnail'),
+		'show_in_rest' => true,
+		'menu_icon' => 'dashicons-businessperson',
+	));
+});
+
+// Register Carbon Fields for Staff
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+add_action('carbon_fields_register_fields', function () {
+	Container::make('post_meta', __('Staff Details', 'uabwp-tw'))
+		->where('post_type', '=', 'staff')
+		->add_fields(array(
+			Field::make('text', 'staff_position', __('Position')),
+			Field::make('text', 'staff_office', __('Office')),
+			Field::make('text', 'staff_phone', __('Phone')),
+			Field::make('image', 'staff_photo', __('Photo')),
+		));
+});
 
 if (!defined('UABWP_TW_VERSION')) {
 	/*

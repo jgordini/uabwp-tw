@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filter staff based on data-category attribute
         staffCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
-            if (cardCategory === filterValue) {
+            // Support multiple categories (space-separated)
+            if (cardCategory && cardCategory.split(' ').includes(filterValue)) {
                 card.style.display = 'flex';
             } else {
                 card.style.display = 'none';
