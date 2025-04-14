@@ -10,41 +10,61 @@
 get_header();
 ?>
 
-<section id="primary">
-	<main id="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<?php
+// Display featured image if set
+if (has_post_thumbnail()):
+	?>
+	<figure class="page-featured-image w-full mb-8 h-64 lg:h-96 overflow-hidden">
+		<?php the_post_thumbnail('full', array('class' => 'w-full h-full object-cover')); ?>
+	</figure>
+	<?php
+endif;
+?>
 
-		<?php
-		/* Start the Loop */
-		while (have_posts()):
-			the_post();
-			get_template_part('template-parts/content/content', 'single');
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:flex lg:gap-8">
+	<?php // Flex container for content + sidebar ?>
 
-			if (is_singular('post')) {
-				// Previous/next post navigation.
-				the_post_navigation(
-					array(
-						'next_text' => '<span aria-hidden="true">' . __('Next Post', 'uabwp-tw') . '</span> ' .
-							'<span class="sr-only">' . __('Next post:', 'uabwp-tw') . '</span> <br/>' .
-							'<span>%title</span>',
-						'prev_text' => '<span aria-hidden="true">' . __('Previous Post', 'uabwp-tw') . '</span> ' .
-							'<span class="sr-only">' . __('Previous post:', 'uabwp-tw') . '</span> <br/>' .
-							'<span>%title</span>',
-					)
-				);
-			}
+	<?php get_sidebar(); // Include the sidebar template - now placed first for left positioning ?>
 
-			// If comments are open, or we have at least one comment, load
-			// the comment template.
-			if (comments_open() || get_comments_number()) {
-				comments_template();
-			}
+	<div id="primary" class="content-area lg:flex-1"> <?php // Main content area takes remaining space ?>
+		<main id="main" class="site-main">
 
-			// End the loop.
-		endwhile;
-		?>
+			<?php
+			/* Start the Loop */
+			while (have_posts()):
+				the_post();
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header mb-4">
+						<?php the_title('<h1 class="entry-title text-3xl font-bold">', '</h1>'); ?>
+						<?php // Optional: Add post meta (date, author, categories) here if desired for posts ?>
+					</header>
 
-	</main><!-- #main -->
-</section><!-- #primary -->
+					<div class="entry-content">
+						<div
+							class="<?php echo esc_attr(UABWP_TW_TYPOGRAPHY_CLASSES); ?> pl-0 prose-p:pl-0 prose-headings:pl-0 prose-hr:pl-0">
+							<?php
+							the_content();
+
+							wp_link_pages(
+								array(
+									'before' => '<div class="page-links">' . esc_html__('Pages:', 'uabwp-tw'),
+									'after' => '</div>',
+								)
+							);
+							?>
+						</div>
+					</div>
+				</article>
+				<?php
+				// End the loop.
+			endwhile;
+			?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div> <?php // End flex container ?>
 
 <?php
 get_footer();

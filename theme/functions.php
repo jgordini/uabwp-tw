@@ -58,6 +58,7 @@ add_action('carbon_fields_register_fields', function () {
 			Field::make('text', 'staff_office', __('Office')),
 			Field::make('text', 'staff_phone', __('Phone')),
 			Field::make('image', 'staff_photo', __('Photo')),
+			Field::make('rich_text', 'staff_description', __('Description')),
 		));
 });
 
@@ -297,3 +298,54 @@ function remove_empty_p($content)
 	return $content;
 }
 add_filter('the_content', 'remove_empty_p', 20, 1);
+
+/**
+ * Set default permalink structure, category base, and default category upon theme activation.
+ *
+ * Sets permalink structure to /news/%postname%/.
+ * Sets category base to /news/.
+ * Ensures 'News' category exists and sets it as the default post category.
+ * Note: It's still recommended to visit Settings > Permalinks and click "Save Changes"
+ * once after theme activation to ensure rewrite rules (like .htaccess) are fully updated.
+ */
+function uabwp_tw_setup_defaults_on_activation()
+{
+	global $wp_rewrite;
+
+	// --- Permalink Settings ---
+	update_option('permalink_structure', '/news/%postname%/');
+	update_option('category_base', 'news');
+
+	// --- Default Category Settings ---
+	$default_category_name = 'News';
+	$default_category_slug = 'news';
+
+	// Check if category exists
+	$news_category = get_term_by('slug', $default_category_slug, 'category');
+
+	// If not, create it
+	if (!$news_category || is_wp_error($news_category)) {
+		$term_data = wp_insert_term($default_category_name, 'category', ['slug' => $default_category_slug]);
+		if (!is_wp_error($term_data)) {
+			$news_category_id = $term_data['term_id'];
+		} else {
+			// Log error if category creation fails
+			error_log('Failed to create default News category for uabwp-tw theme: ' . $term_data->get_error_message());
+			$news_category_id = null;
+		}
+	} else {
+		$news_category_id = $news_category->term_id;
+	}
+
+	// Set as default category if we have a valid ID
+	if ($news_category_id) {
+		update_option('default_category', $news_category_id);
+	}
+
+	// --- Flush Rewrite Rules ---
+	// Flush rules after all relevant option changes
+	if (is_object($wp_rewrite)) {
+		$wp_rewrite->flush_rules(false);
+	}
+}
+add_action('after_switch_theme', 'uabwp_tw_setup_defaults_on_activation');
