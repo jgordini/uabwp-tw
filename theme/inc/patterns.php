@@ -346,6 +346,19 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register Single Image Card Pattern
+    register_block_pattern(
+        'uabwp-tw/card-single', // Matches the slug in patterns/cards.php
+        array(
+            'title' => esc_html__('Single Image Card', 'uabwp-tw'),
+            'description' => esc_html__('A single card with an editable image, description, and button.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('cards'), // Reads patterns/cards.php
+            'categories' => array('uab', 'text', 'image'), // Match categories from pattern file header
+            'keywords' => array('card', 'image', 'content', 'link', 'button'), // Match keywords from header
+            'blockTypes' => array('core/group', 'core/image', 'core/paragraph', 'core/buttons', 'core/button'), // Match block types from header
+            'viewportWidth' => 600, // Match viewport width from header
+        )
+    );
 
 }
 add_action('init', 'uabwp_tw_register_block_patterns');

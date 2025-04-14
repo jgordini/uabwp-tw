@@ -305,7 +305,7 @@
       "defaultFontSizes": false
     },
     "layout": {
-      "contentSize": "65ch",
+      "contentSize": "80rem",
       "wideSize": "80ch"
     },
     "spacing": {

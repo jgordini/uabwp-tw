@@ -11,8 +11,8 @@
  * Inserter: true
  */
 ?>
-<!-- wp:query {"queryId":5,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"ignore","inherit":false},"metadata":{"categories":["news"],"patternName":"uabwp-tw/news-feed-left","name":"News Feed - Image Left"},"className":"news-feed-left container mx-auto px-6 md:px-12 py-16 md:py-24 not-prose","layout":{"type":"default"}} -->
-<div class="wp-block-query news-feed-left container mx-auto px-6 md:px-12 py-16 md:py-24 not-prose">
+<!-- wp:query {"queryId":5,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"ignore","inherit":false},"metadata":{"categories":["news"],"patternName":"uabwp-tw/news-feed-left","name":"News Feed - Image Left"},"className":"news-feed-left container max-w-7xl mx-auto px-6 md:px-12 pb-16 md:pb-24 not-prose","layout":{"type":"default"}} -->
+<div class="wp-block-query news-feed-left container max-w-7xl mx-auto px-6 md:px-12 my-16 pb-16 md:pb-24 not-prose">
 
     <!-- wp:post-template {"className":"space-y-16","layout":{"type":"default"}} -->
     <!-- wp:group {"tagName":"article","className":"grid grid-cols-1 sm:grid-cols-10 gap-6 sm:gap-x-8 md:gap-x-12 md:items-center","layout":{"type":"default"}} -->

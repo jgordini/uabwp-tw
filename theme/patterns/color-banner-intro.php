@@ -36,25 +36,29 @@
                     <?php // TODO: Consider making links dynamic ?>
                     <div class="mt-8 gap-6 grid grid-cols-2 md:flex md:flex-wrap md:justify-center">
                         <div class="md:w-auto md:flex md:justify-center">
-                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                            <a href="#"
+                                class="btn-link-arrow flex items-center items-baseline text-uab-green font-bold">
                                 <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
                                 <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
                             </a>
                         </div>
                         <div class="md:w-auto md:flex md:justify-center">
-                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                            <a href="#"
+                                class="btn-link-arrow flex items-center items-baseline text-uab-green font-bold">
                                 <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
                                 <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
                             </a>
                         </div>
                         <div class="md:w-auto md:flex md:justify-center">
-                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                            <a href="#"
+                                class="btn-link-arrow flex items-center items-baseline text-uab-green font-bold">
                                 <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
                                 <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
                             </a>
                         </div>
                         <div class="md:w-auto md:flex md:justify-center">
-                            <a href="#" class="btn-link-arrow flex items-center text-uab-green font-bold">
+                            <a href="#"
+                                class="btn-link-arrow flex items-center items-baseline text-uab-green font-bold">
                                 <span><?php echo esc_html__('Lorem ipsum', 'uabwp-tw'); ?></span>
                                 <i class="fa-solid fa-arrow-right ml-1.5 arrow-icon"></i>
                             </a>
