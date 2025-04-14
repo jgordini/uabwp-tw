@@ -332,6 +332,20 @@ function uabwp_tw_register_block_patterns()
             'viewportWidth' => 1340,
         )
     );
+    // Register Google Map Pattern
+    register_block_pattern(
+        'uabwp-tw/google-map',
+        array(
+            'title' => esc_html__('Google Map', 'uabwp-tw'),
+            'description' => esc_html__('A Google Map embed with a marker for UAB.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('map'),
+            'categories' => array('media', 'embed', 'uab'),
+            'keywords' => array('map', 'google map', 'location'),
+            'blockTypes' => array('core/html'),
+            'viewportWidth' => 1386,
+        )
+    );
+
 
 }
 add_action('init', 'uabwp_tw_register_block_patterns');
