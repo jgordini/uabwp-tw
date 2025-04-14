@@ -21,7 +21,7 @@
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
                 <a href="#"
-                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
+                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
                 <a href="#"
-                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
+                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
             </div>
         </div>
 
@@ -49,7 +49,7 @@
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
                 <a href="#"
-                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
+                    class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Read more', 'uabwp-tw'); ?></a>
             </div>
         </div>
     </div>

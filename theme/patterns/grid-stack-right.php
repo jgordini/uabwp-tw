@@ -33,7 +33,7 @@
         <!-- Button -->
         <?php // Using theme's solid button style ?>
         <a href="#"
-            class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?><i
+            class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?><i
                 class="fa-solid fa-up-right-from-square ml-1.5" aria-hidden="true"></i><span class="sr-only">
                 <?php esc_html_e('Learn more', 'uabwp-tw'); ?></span></a>
     </div>

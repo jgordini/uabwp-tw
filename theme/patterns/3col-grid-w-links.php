@@ -20,7 +20,8 @@
                 <p class="text-lg mb-6 font-aktiv-grotesk text-black">
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
-                <a href="#" class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base"><span
+                <a href="#"
+                    class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base not-prose"><span
                         class="hover:underline"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?></span><i
                         class="fa-solid fa-arrow-right ml-1.5" aria-hidden="true"></i></a>
             </div>
@@ -35,7 +36,8 @@
                 <p class="text-lg mb-6 font-aktiv-grotesk text-black">
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
-                <a href="#" class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base"><span
+                <a href="#"
+                    class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base not-prose"><span
                         class="hover:underline"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?></span><i
                         class="fa-solid fa-arrow-right ml-1.5" aria-hidden="true"></i></a>
             </div>
@@ -50,7 +52,8 @@
                 <p class="text-lg mb-6 font-aktiv-grotesk text-black">
                     <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius nunc mollis, laoreet orci id, feugiat ex. Quisque varius, sem at finibus accumsan, enim purus aliquam eros, nec cursus eros metus ut quam.', 'uabwp-tw'); ?>
                 </p>
-                <a href="#" class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base"><span
+                <a href="#"
+                    class="inline-flex items-center text-uab-green font-bold font-aktiv-grotesk text-base not-prose"><span
                         class="hover:underline"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?></span><i
                         class="fa-solid fa-arrow-right ml-1.5" aria-hidden="true"></i></a>
             </div>

@@ -36,9 +36,9 @@
                 </p>
                 <div class="mt-6 flex gap-4">
                     <a href="#"
-                        class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?></a>
+                        class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Learn More', 'uabwp-tw'); ?></a>
                     <a href="#"
-                        class="inline-block border border-uab-green text-uab-green px-6 py-2 rounded-md hover:bg-uab-green hover:text-white transition-colors font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('View Details', 'uabwp-tw'); ?></a>
+                        class="inline-block border border-uab-green text-uab-green px-6 py-2 rounded-md hover:bg-uab-green hover:text-white transition-colors font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('View Details', 'uabwp-tw'); ?></a>
                 </div>
             </div>
 
