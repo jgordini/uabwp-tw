@@ -360,6 +360,20 @@ function uabwp_tw_register_block_patterns()
         )
     );
 
+    // Register Buttons Pattern
+    register_block_pattern(
+        'uabwp-tw/buttons',
+        array(
+            'title' => esc_html__('Buttons', 'uabwp-tw'),
+            'description' => esc_html__('A set of styled buttons including primary, secondary, and text link variations.', 'uabwp-tw'),
+            'content' => uabwp_tw_get_pattern_content('buttons'),
+            'categories' => array('featured', 'text', 'uab'),
+            'keywords' => array('button', 'link', 'cta', 'call to action'),
+            'blockTypes' => array('core/buttons', 'core/button'),
+            'viewportWidth' => 600,
+        )
+    );
+
 }
 add_action('init', 'uabwp_tw_register_block_patterns');
 
