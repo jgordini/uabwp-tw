@@ -33,23 +33,23 @@
         <ul class="mb-6 divide-y divide-gray-200 border-t border-b border-gray-200">
             <li>
                 <a href="#"
-                    class="block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline "><?php echo esc_html__('Dolor Sit Amet', 'uabwp-tw'); ?><i
+                    class="not-prose block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline"><?php echo esc_html__('Dolor Sit Amet', 'uabwp-tw'); ?><i
                         class="fa-solid fa-arrow-right ml-1.5 float-right" aria-hidden="true"></i></a>
             </li>
             <li>
                 <a href="#"
-                    class="block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline "><?php echo esc_html__('Consectetur Adipiscing', 'uabwp-tw'); ?><i
+                    class="not-prose block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline"><?php echo esc_html__('Consectetur Adipiscing', 'uabwp-tw'); ?><i
                         class="fa-solid fa-up-right-from-square ml-1.5 float-right" aria-hidden="true"></i><span
                         class="sr-only"> <?php esc_html_e('Opens an external link.', 'uabwp-tw'); ?></span></a>
             </li>
             <li>
                 <a href="#"
-                    class="block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline "><?php echo esc_html__('Vestibulum Malesuada', 'uabwp-tw'); ?><i
+                    class="not-prose block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline"><?php echo esc_html__('Vestibulum Malesuada', 'uabwp-tw'); ?><i
                         class="fa-solid fa-arrow-right ml-1.5 float-right" aria-hidden="true"></i></a>
             </li>
             <li>
                 <a href="#"
-                    class="block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline "><?php echo esc_html__('Labore et Dolore', 'uabwp-tw'); ?><i
+                    class="not-prose block py-2 hover:pl-2.5 hover:bg-gray-100 transition-all duration-150 ease-in-out text-gray-700 font-aktiv-grotesk text-base no-underline hover:no-underline"><?php echo esc_html__('Labore et Dolore', 'uabwp-tw'); ?><i
                         class="fa-solid fa-arrow-right ml-1.5 float-right" aria-hidden="true"></i></a>
             </li>
         </ul>
@@ -57,7 +57,7 @@
         <!-- Button -->
         <?php // Using theme's solid button style ?>
         <a href="#"
-            class="inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap not-prose"><?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?><i
+            class="not-prose inline-block bg-uab-green hover:bg-dragons-lair-green text-white px-6 py-2 rounded-md font-aktiv-grotesk text-base no-underline hover:no-underline whitespace-nowrap"><?php echo esc_html__('Lorem Ipsum', 'uabwp-tw'); ?><i
                 class="fa-solid fa-up-right-from-square ml-1.5" aria-hidden="true"></i><span class="sr-only">
                 <?php esc_html_e('Learn more', 'uabwp-tw'); ?></span></a>
     </div>
