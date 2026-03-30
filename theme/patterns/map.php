@@ -45,6 +45,6 @@ function initMap() {
 window.initMap = initMap;
 </script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt5bWM1A4UIg24vuWNHzUzD0CHhsekd9w&callback=initMap&loading=async">
+    src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_attr(defined('GOOGLE_MAPS_API_KEY') ? GOOGLE_MAPS_API_KEY : get_option('google_maps_api_key', '')); ?>&callback=initMap&loading=async">
 </script>
 <!-- /wp:html --> 
